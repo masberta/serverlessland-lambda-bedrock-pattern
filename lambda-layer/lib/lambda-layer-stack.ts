@@ -31,3 +31,5 @@ export class LambdaLayerStack extends cdk.Stack {
     }));
   }
 }
+
+console.log(fn.functionName)
