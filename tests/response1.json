@@ -1,0 +1,1 @@
+{"statusCode": 200, "body": "\"\\nIn the context of JavaScript, a function can be run asynchronously if it returns a Promise. A Promise is an object that represents the eventual completion or failure of an asynchronous operation. It allows you to write asynchronous code in a synchronous-looking manner, making it easier to manage and control the flow of execution in your code.\""}
