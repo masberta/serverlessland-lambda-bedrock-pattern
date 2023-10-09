@@ -27,6 +27,6 @@ Edit the `test` script by providing the function name to the `fn` variable
 `source test`
 
 This will execute a bash script invoking the Lambda function just deployed.
-Open `response1.json` to `reponse4.json` to validate the Lambda funtion sucessfully invoked Bedrock and provided the correction definition of `function` in four different contexts.
+Open `response1.json` to `reponse4.json` to validate the Lambda funtion sucessfully invoked Bedrock and provided the correct definition of `function` in four different contexts.
 
 
