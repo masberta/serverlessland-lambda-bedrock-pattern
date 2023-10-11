@@ -18,18 +18,16 @@ export class LambdaLayerStack extends cdk.Stack {
         runtime: lambda.Runtime.PYTHON_3_9,
         code: lambda.Code.fromAsset('resources/lambda'),
         handler: 'lambda_function.handler',
-        timeout: cdk.Duration.seconds(15),
+        timeout: cdk.Duration.seconds(50),
         layers: [layer]
       }
     );
 
     fn.role?.attachInlinePolicy(new iam.Policy(this, 'bedrock-policy', {
       statements: [new iam.PolicyStatement({
-        actions: ['bedrock:InvokeModel'],
-        resources: ["arn:aws:bedrock:*::foundation-model/*"],
+        actions: ['bedrock:InvokeModel', 'bedrock:ListFoundationModels'],
+        resources: ["arn:aws:bedrock:*::foundation-model/*", "*"],
       })],
     }));
   }
 }
-
-console.log(fn.functionName)

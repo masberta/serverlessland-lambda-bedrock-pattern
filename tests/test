@@ -4,7 +4,7 @@ fn="LambdaLayerStack-LambdaFunctionBF21E41F-XzRF7ZvYq6Kj"
 echo "Deleting previous test results..."
 rm response*.json
 echo "Executing tests"
-aws lambda invoke --function-name $fn --cli-binary-format raw-in-base64-out --payload '{"word":"function", "context":"In Javascript a function can be run asynchronously"}' --output json response1.json &
-aws lambda invoke --function-name $fn --cli-binary-format raw-in-base64-out --payload '{"word":"function", "context":"the promotion required more responsibilities in his job function"}' --output json response2.json &
-aws lambda invoke --function-name $fn --cli-binary-format raw-in-base64-out --payload '{"word":"function", "context":"the engine ran out of fuel and stopped to function"}' --output json response3.json &
-aws lambda invoke --function-name $fn --cli-binary-format raw-in-base64-out --payload '{"word":"function", "context":"the math teacher wrote a function on the blackboard"}' --output json response4.json &
+aws lambda invoke --function-name $fn --cli-binary-format raw-in-base64-out --payload '{"request_body":{"prompt": "Definition of 'function' in this context:In Javascript a function can be executed asynchronously","temperature": 0.5,"topP": 0.5,"maxTokens": 200,"stopSequences": [],"countPenalty": {"scale": 0},"presencePenalty": {"scale": 0},"frequencyPenalty": {"scale": 0}}, "word":"function", "context":"In Javascript a function can be run asynchronously", "model_id":"ai21.j2-mid"}' --output json ./response1.json &
+#aws lambda invoke --function-name $fn --cli-binary-format raw-in-base64-out --payload '{"word":"function", "context":"the promotion required more responsibilities in his job function"}' --output json response2.json &
+#aws lambda invoke --function-name $fn --cli-binary-format raw-in-base64-out --payload '{"word":"function", "context":"the engine ran out of fuel and stopped to function"}' --output json response3.json &
+#aws lambda invoke --function-name $fn --cli-binary-format raw-in-base64-out --payload '{"word":"function", "context":"the math teacher wrote a function on the blackboard"}' --output json response4.json &
