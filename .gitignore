@@ -1,3 +1,4 @@
 !/.gitignore
 cdk.out/
 .DS_Store
+tests/*response*.json
